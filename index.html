@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Budget SIM Comparison</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --card:#ffffff; --text:#1c1c1a; --sub:#6b6b66;
+    --accent:#d4482f; --border:#e4e2dd; --head:#2b2b28; --headtext:#fff;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#171715; --card:#222220; --text:#f0efec; --sub:#a8a6a0;
+      --accent:#ff7a5c; --border:#3a3a36; --head:#2e2e2a; --headtext:#fff;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#171715; --card:#222220; --text:#f0efec; --sub:#a8a6a0;
+    --accent:#ff7a5c; --border:#3a3a36; --head:#2e2e2a; --headtext:#fff;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:28px 18px 48px;}
+  h1{font-size:1.5rem;margin:0 0 4px;}
+  .lead{color:var(--sub);font-size:0.95rem;margin:0 0 24px;}
+  .tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--card);}
+  table{border-collapse:collapse;width:100%;min-width:680px;font-size:0.92rem;}
+  th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap;}
+  thead th{background:var(--head);color:var(--headtext);font-weight:600;position:sticky;top:0;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+  td.name{font-weight:700;color:var(--text);}
+  .tag{display:inline-block;font-size:0.75rem;padding:2px 8px;border-radius:999px;background:var(--accent);color:#fff;margin-top:4px;}
+  .notes{margin-top:22px;padding:16px 18px;border-radius:12px;background:var(--card);border:1px solid var(--border);}
+  .notes h2{font-size:1.05rem;margin:0 0 8px;}
+  .notes ul{margin:0;padding-left:1.2em;color:var(--sub);line-height:1.7;}
+  .notes li strong{color:var(--text);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>格安SIM 比較表</h1>
+  <p class="lead">2026年10月時点のおすすめプラン比較</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>回線</th>
+          <th>容量</th>
+          <th>月額（税込）</th>
+          <th>速度傾向</th>
+          <th>おすすめな人</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">楽天モバイル</td>
+          <td>楽天/au</td>
+          <td>無制限</td>
+          <td>3,278円</td>
+          <td>良好・場所により差</td>
+          <td>とにかく容量を気にしたくない人</td>
+        </tr>
+        <tr>
+          <td class="name">ahamo大盛り<span class="tag">2026/11/30廃止</span></td>
+          <td>ドコモ</td>
+          <td>110GB（増量中120GB）</td>
+          <td>4,950円</td>
+          <td>安定・速い</td>
+          <td>11月末までの新規／既存契約のみ</td>
+        </tr>
+        <tr>
+          <td class="name">ahamo新プラン<span class="tag">12/1〜</span></td>
+          <td>ドコモ</td>
+          <td>40GB／60GB／120GBの3段階</td>
+          <td>3,135円〜</td>
+          <td>安定・速い</td>
+          <td>12月以降、大盛りの後継として検討する人</td>
+        </tr>
+        <tr>
+          <td class="name">UQモバイル</td>
+          <td>au</td>
+          <td>35GB</td>
+          <td>3,828円</td>
+          <td>安定（au回線）</td>
+          <td>auからの乗換えで相性重視</td>
+        </tr>
+        <tr>
+          <td class="name">ワイモバイル</td>
+          <td>ソフトバンク</td>
+          <td>35GB</td>
+          <td>5,478円</td>
+          <td>安定</td>
+          <td>家族でまとめて乗換え</td>
+        </tr>
+        <tr>
+          <td class="name">LINEMO ベストプランV</td>
+          <td>ソフトバンク</td>
+          <td>30GB</td>
+          <td>2,970円</td>
+          <td>安定</td>
+          <td>通話込みでバランス重視</td>
+        </tr>
+        <tr>
+          <td class="name">IIJmio</td>
+          <td>ドコモ/au</td>
+          <td>55GB</td>
+          <td>3,900円</td>
+          <td>普通</td>
+          <td>コスパ最優先</td>
+        </tr>
+        <tr>
+          <td class="name">日本通信SIM</td>
+          <td>ドコモ</td>
+          <td>50GB</td>
+          <td>2,178円</td>
+          <td>普通</td>
+          <td>価格重視・通話70分付き</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="notes">
+    <h2>選び方のポイント</h2>
+    <ul>
+      <li><strong>auから乗換え</strong>：同じ回線設備の<strong>UQモバイル</strong>が電波の相性トラブル少なめ</li>
+      <li><strong>速度と容量のバランス</strong>：<strong>ahamo</strong></li>
+      <li><strong>容量を気にせず使いたい</strong>：<strong>楽天モバイル</strong>が最安級の無制限</li>
+      <li><strong>ahamo大盛りは2026年11月30日で提供終了</strong>（既存契約者も自動終了）。12月1日からahamoは40GB/60GB/120GBの3段階制プランに刷新、月額3,135円〜</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
